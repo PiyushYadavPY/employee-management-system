@@ -1,0 +1,81 @@
+<div class="container-fluid g-0 p-2" >
+
+    <div class="row g-0 " >
+
+        <div class="col-md-2 d-flex justify-content-center align-items-center"> 
+            <!-- <img src="../../assets/images/{{employee.profile}}" alt="Profile Image" class="profile">  -->
+            <p><b>Employee Id : {{employee.employeeid}}</b> </p>
+        </div>
+
+        <div class="col ps-2" >
+
+            <div class="row g-0" >
+
+                <div class="col-md-10 text-center">
+
+                    <span class="name">{{employee.first_name | titlecase}} {{employee.last_name | titlecase}}</span>
+
+                </div>
+                
+
+                <div class="col-md-2 d-flex justify-content-center align-items-center">
+                    <div class="btn-group" role="button">
+                        <button class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                            (click)="editEmployeeClicked()">Edit</button>
+
+                        <button class="btn btn-outline-danger" (click)="deleteEmployeeClicked()">Delete</button>
+                    </div>
+                    <!-- (click) = "editEmployeeClicked()" -->
+                </div>
+
+            </div>
+
+            <div class="row g-0 mt-3">
+                <div class="col">
+                    <table class="table table-hover mx-auto">
+                        <thead class="text-center fs-5 fst-italic text-secondary">
+                            <tr>
+                                <td colspan="2">Personal Details</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Mobile</td>
+                                <td>{{employee.mobile_number}}</td>
+                            </tr>
+                            <tr>
+                                <td>Email</td>
+                                <td>{{employee.email}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+
+                <div class="col">
+                    <table class="table table-hover mx-auto">
+                        <thead class="text-center fs-5 fst-italic text-secondary">
+                            <tr>
+                                <td colspan="2">Job Details</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Experience</td>
+                                <td>{{employee.experience}} yrs</td>
+                            </tr>
+                            <tr>
+                                <td>Salary</td>
+                                <td>{{employee.salary}}LPA</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+</div>
